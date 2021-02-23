@@ -1,0 +1,263 @@
+/*css reset*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Navbar */
+#navbar{
+    display: flex;
+    /*flex-direction: row-reverse;*/
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+/* Navbar : logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+#logo img{
+        height: 54px;
+        margin: 3px 6px;
+}
+
+/* Navbar : List styling */
+#navbar ul{
+    display: flex;
+}
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-shadow: 1px 1px black;
+    transition: 1s;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+}
+#home::before{
+    content: "";
+    background: url('bg1.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 98%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1{
+    color: white;
+    text-align: center;
+    text-shadow: 3px 3px black;
+    font-size: 3.2rem;
+    padding: 12px;
+
+}
+
+#home div{
+    height: 600px;
+    width: 600px;
+    background-image: url('f1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: slide 20s infinite;
+    border: 4px dashed white;
+    /* border-style: dashed; */
+}
+@keyframes slide{
+    25%{
+        background-image: url('f2.jpg');  
+    }
+    50%{
+        background-image: url('f3.jpg');  
+    }
+    75%{
+        background-image: url('f4.jpg');  
+    }
+    100%{
+        background-image: url('f1.jpg');  
+    }
+}
+
+/* Services Section */
+#service-container{
+    height: 600px;
+    background-color: rgb(243, 152, 87);
+}
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{
+    border: 3px solid brown;
+    padding: 34px;
+    margin: 25px 6px;
+    border-radius: 30px;
+    background-color: rgb(245, 197, 197);
+}
+#services .box img{
+    height: 180px;
+    margin: auto;
+    display: block;
+    transition: 1s;
+}
+#services .box img:hover{
+    /* transform: translate(20px); */
+    transform: scale(2);
+}
+#service-container h1{
+    margin-top: 39px;
+    text-align: center;
+    /* text-shadow: 3px 3px black; */
+    font-size: 3.2rem;
+    padding: 12px;
+
+}
+
+#services
+
+/* Uitility classes */
+/* .h-primary{
+    font-size: 90px;
+    padding: 12px;
+} */
+.h-secondary{
+    font-size: 2.0rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: brown;
+    color: white;
+    margin: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: black;
+    transition: ease;
+    transform: scale(1.2);
+    font-weight: bold;
+}
+.center{
+    text-align: center;
+}
+
+/* Client section*/
+#client-section{
+    height: 350px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('ross-bucher-QBQQCO8G8ho-unsplash.jpg');
+    width: 100%;
+    height: 350px;
+    z-index: -1;
+    opacity: 0.5;
+}
+#client-section h1{
+    text-align: center;
+    text-shadow: 1px 1px rgb(36, 33, 33);
+    font-size: 3.2rem;
+    padding: 12px;
+    color: black;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img{
+    height: 144px;
+}
+.client-item{
+    padding: 40px;
+}
+
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url('miles-burke-idhx-MOCDSk-unsplash.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 600px;
+    z-index: -1;
+    opacity: 0.9;    ;
+
+}
+#contact h1{
+    text-align: center;
+    text-shadow: 1px 1px rgb(48, 45, 45);
+    font-size: 3.2rem;
+    padding: 12px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+#contact-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 30px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 20px;
+}
+footer div{
+    text-align: center;
+}
